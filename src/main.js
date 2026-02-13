@@ -25,7 +25,7 @@ export default async ({ req, res, log, error }) => {
     }
 
     const client = new Client()
-        .setEndpoint('https://cloud.appwrite.io/v1')
+        .setEndpoint('https://fra.cloud.appwrite.io/v1')
         .setProject(PROJECT_ID)
         .setJWT(jwt);
 

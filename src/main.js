@@ -150,10 +150,7 @@ export default async ({ req, res, log, error }) => {
 
             return res.json({
                 success      : true,
-                resources    : { rows : resourcesRes.rows.map(row => {
-                    const cleaned = cleanRow(row);
-                    return cleaned;
-                }) },
+                resources    : { rows : resourcesRes.rows.map(cleanRow) },
                 events       : { rows : eventsRes.rows.map(cleanRow) },
                 assignments  : { rows : assignmentsRes.rows.map(cleanRow) },
                 dependencies : { rows : dependenciesRes.rows.map(cleanRow) },

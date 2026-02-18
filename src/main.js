@@ -112,7 +112,7 @@ export default async ({ req, res, log, error }) => {
         if (changes.updated) {
             await updateOperation(changes.updated, tableId);
         }
-        // New row IDs to send to the client.
+        // New row IDs to send to the client
         return rows;
     }
 
